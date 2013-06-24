@@ -46,7 +46,7 @@ The approach presented here is simply superior to any other approach.
 
 3. To use, simply drag the 'WP Social Networks Widget' widget into any widget enabled area. 
 
-4. Configure the widget by choosing a title, URLs and/or Labels to your various social profiles and.
+4. Configure the widget by choosing a title, URLs and/or Labels to your various social profiles.
 
 == Screenshots ==
 
