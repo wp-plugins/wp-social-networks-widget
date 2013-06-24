@@ -28,14 +28,14 @@ Display Font Awesome Icons of social network sites that linkback to social netwo
 
 The approach presented here is simply superior to any other approach.
 
-    Colors can be adjusted with CSS3, with gradients and all that bling bling
-    Scalable graphics
-    High DPI ("retina") compatible
-    Simple HTML markup: just <i class="icon icon-foo"></i>. No CSS sprite preprocessing or other workflow complications needed.
-    Can be animated with CSS3 transitions
-    Easily match the link text color for monotone icons
-    FontAwesome is served from CDN
-    Works with legacy browsers (IE7+)
+Colors can be adjusted with CSS3, with gradients and all that bling bling
+Scalable graphics
+High DPI ("retina") compatible
+Simple HTML markup: just <i class="icon icon-foo"></i>. No CSS sprite preprocessing or other workflow complications needed.
+Can be animated with CSS3 transitions
+Easily match the link text color for monotone icons
+FontAwesome is served from CDN
+Works with legacy browsers (IE7+)
 
 
 == Installation ==
