@@ -1,5 +1,5 @@
-=== Social Networks Widget ===
-Contributors: Mladen Milentijevic
+=== WP Social Networks Widget ===
+Contributors: Mladjo
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=QXZZJ83F6PBDQ&lc=SE&item_name=WP%20Social%20Networks%20Plugin&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: social networks, widget, facebook, fontawesome, twitter, google+, linkedin, rss, github, flickr, youtube, rss
 Requires at least: 2.5
