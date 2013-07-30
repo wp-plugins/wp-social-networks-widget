@@ -4,9 +4,9 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=QXZZJ
 Tags: social networks, widget, facebook, fontawesome, twitter, google+, linkedin, rss, github, flickr, youtube, rss
 Requires at least: 2.5
 Tested up to: 3.5.2
-Stable tag: 1.0
-License: GPLv2
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Stable tag: 1.1
+License: GPLv3
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 Displays Font Awesome Icons of social network sites that linkback to social network profiles.
 
@@ -24,6 +24,9 @@ Display Font Awesome Icons of social network sites that linkback to social netwo
 <li>Flickr</li>
 <li>YouTube</li>
 <li>RSS</li>
+<li>Bitbuckete</li>
+<li>Instagram</li>
+<li>Pinterest</li>
 </ul>
 
 <p>The approach presented here is simply superior to any other approach.</p>
@@ -46,7 +49,7 @@ Display Font Awesome Icons of social network sites that linkback to social netwo
 
 3. To use, simply drag the 'WP Social Networks Widget' widget into any widget enabled area. 
 
-4. Configure the widget by choosing a title, URLs and/or Labels to your various social profiles.
+4. Configure the widget by choosing  Icons and/or Labels, Icons size, horizontal or vertical display and enter URL's to your various social profiles.
 
 == Screenshots ==
 
@@ -58,5 +61,9 @@ Display Font Awesome Icons of social network sites that linkback to social netwo
 
 
 == Changelog ==
+= 1.1 =
+* Widget rewriten for easier maintance
+* Added new icons Bitbucket, Instagram and Pinterest
+* Added option to choose icon sizes
 = 1.0 =
 * Initial release
