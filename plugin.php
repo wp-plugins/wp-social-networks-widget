@@ -15,7 +15,7 @@ if ( !class_exists('WPSocialNetworksWidget') ) {
 
 class WPSocialNetworksWidget extends WP_Widget {
 	
-	protected $version = '1.0.0';
+	protected $version = '1.1.0';
 
 	protected $plugin_slug = 'wp_social_networks_widget'; 
 			
