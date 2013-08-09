@@ -3,7 +3,7 @@ Contributors: Mladjo
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=QXZZJ83F6PBDQ&lc=SE&item_name=WP%20Social%20Networks%20Plugin&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: social networks, widget, facebook, fontawesome, twitter, google+, linkedin, rss, github, flickr, youtube, rss
 Requires at least: 2.5
-Tested up to: 3.5.2
+Tested up to: 3.6.0
 Stable tag: 1.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
