@@ -15,7 +15,7 @@ if ( !class_exists('WPSocialNetworksWidget') ) {
 
 class WPSocialNetworksWidget extends WP_Widget {
 	
-	protected $version = '1.1.0';
+	protected $version = '1.2.0';
 
 	protected $plugin_slug = 'wp_social_networks_widget'; 
 			
@@ -33,10 +33,10 @@ class WPSocialNetworksWidget extends WP_Widget {
 		$widget_ops = array( 'classname' => $this->plugin_slug, 'description' =>__('Link to your social network profiles.', $this->plugin_slug ));
 
 		/* Widget control settings. */
-		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => $this->plugin_slug );
+		$control_ops = array( 'width' => 500, 'height' => 350, 'id_base' => $this->plugin_slug );
 
 		/* Create the widget. */
-		$this->WP_Widget( $this->plugin_slug, __('WP Social Networks', $this->plugin_slug), $widget_ops, $control_ops );
+		$this->WP_Widget( $this->plugin_slug, __('WP Social Networks', 'wsnv'), $widget_ops, $control_ops );
 		
 		if ( is_active_widget(false, false, $this->id_base) ){
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
@@ -69,7 +69,7 @@ class WPSocialNetworksWidget extends WP_Widget {
 	* @since 1.0.0
 	*/
 	public function enqueue_styles() {
-  	wp_enqueue_style('font-awesome', '//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.css', false, null);
+  	wp_enqueue_style('font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css', false, null);
 		wp_enqueue_style( $this->plugin_slug . '-plugin-styles', plugins_url( 'assets/css/app.css', __FILE__ ), array(), $this->version );
 	}
 
@@ -101,7 +101,8 @@ class WPSocialNetworksWidget extends WP_Widget {
 			'bitbucket' => '',	
 			'instagram' => '',	
 			'pinterest' => '',	
-		
+			'dribbble' => '',	
+	
 			'twitter_label' => '',	
 			'facebook_label' => '',	
 			'flickr_label' => '',	
@@ -113,10 +114,13 @@ class WPSocialNetworksWidget extends WP_Widget {
 			'bitbucket_label' => '',	
 			'instagram_label' => '',	
 			'pinterest_label' => '',	
+			'dribbble_label' => '',	
 
 			'display' => 'icons',			
+			'size'  => 'fa-3x',	
 			'vertical' => 'vertical',		
-			'size'  => '3x',	
+			'new_window'  => 'no',	
+			'css'  => '',	
 
 		);
 
@@ -135,9 +139,9 @@ class WPSocialNetworksWidget extends WP_Widget {
 		 */
 		protected function get_display_options () {
 			return array(
-						'icons' => __( 'Icons', $this->plugin_slug ),
-						'labels' => __( 'Labels', $this->plugin_slug ),
-						'both' => __( 'Both', $this->plugin_slug ),
+						'icons' => __( 'Icons', 'wsnv' ),
+						'labels' => __( 'Labels', 'wsnv' ),
+						'both' => __( 'Both', 'wsnv' ),
 
 						);
 		} // End get_display_options()
@@ -147,11 +151,11 @@ class WPSocialNetworksWidget extends WP_Widget {
 		 */
 		protected function get_size_options () {
 			return array(
-						'large' => __( 'Large', $this->plugin_slug ),
-						'2x' => __( '2X', $this->plugin_slug ),
-						'3x' => __( '3X', $this->plugin_slug ),
-						'4x' => __( '4X', $this->plugin_slug ),
-						'5x' => __( '5X', $this->plugin_slug ),
+						'fa-lg' 	=> __( 'Large', 'wsnv' ),
+						'fa-2x' 			=> __( '2X', 'wsnv' ),
+						'fa-3x'			=> __( '3X', 'wsnv' ),
+						'fa-4x' 			=> __( '4X', 'wsnv' ),
+						'fa-5x' 			=> __( '5X', 'wsnv' ),
 						);
 		} // End get_size_options()
 
@@ -183,6 +187,7 @@ class WPSocialNetworksWidget extends WP_Widget {
 		$instance['bitbucket'] = $new_instance['bitbucket'];
 		$instance['instagram'] = $new_instance['instagram'];
 		$instance['pinterest'] = $new_instance['pinterest'];
+		$instance['dribbble'] = $new_instance['dribbble'];
 		
 		$instance['twitter_label'] = $new_instance['twitter_label'];
 		$instance['facebook_label'] = $new_instance['facebook_label'];
@@ -195,13 +200,15 @@ class WPSocialNetworksWidget extends WP_Widget {
 		$instance['bitbucket_label'] = $new_instance['bitbucket_label'];
 		$instance['instagram_label'] = $new_instance['instagram_label'];
 		$instance['pinterest_label'] = $new_instance['pinterest_label'];
+		$instance['dribbble_label'] = $new_instance['dribbble_label'];
 
 		/* The select box is returning a text value, so we escape it. */
 		$instance['display'] = esc_attr($new_instance['display']);
 		$instance['size'] = esc_attr($new_instance['size']);
 
 		$instance['vertical'] = $new_instance['vertical'];
-
+		$instance['new_window'] = $new_instance['new_window'];
+		$instance['css'] = $new_instance['css'];
 		return $instance;
 		} // End update()
 

@@ -4,6 +4,8 @@
 	 $display = $instance['display'];
 	 $size = $instance['size'];
 	 $vertical = $instance['vertical'];
+	 $new_window = $instance['new_window'];
+	 $css = $instance['css'];
 	 
 	$networks['Twitter']['link'] = $instance['twitter'];
 	$networks['Facebook']['link'] = $instance['facebook'];
@@ -16,6 +18,7 @@
 	$networks['Bitbucket']['link'] = $instance['bitbucket'];
 	$networks['Instagram']['link'] = $instance['instagram'];
 	$networks['Pinterest']['link'] = $instance['pinterest'];
+	$networks['Dribbble']['link'] = $instance['dribbble'];
 	
 	$networks['Twitter']['label'] = $instance['twitter_label'];
 	$networks['Facebook']['label'] = $instance['facebook_label'];
@@ -28,24 +31,24 @@
 	$networks['Bitbucket']['label'] = $instance['bitbucket_label'];
 	$networks['Instagram']['label'] = $instance['instagram_label'];
 	$networks['Pinterest']['label'] = $instance['pinterest_label'];
+	$networks['Dribbble']['label'] = $instance['dribbble_label'];
 
 	if ( $title )echo $before_title . $title . $after_title;
 ?>
 
 	<ul class="social-networks unstyled <?php if ($vertical == 0) : echo 'inline'; endif;?>">
 		
-			<?php foreach(array("Facebook", "Twitter", "Flickr", "RSS", "Linkedin", "Google-Plus", "Github","Youtube", "Bitbucket", "Instagram","Pinterest") as $network) : ?>
+			<?php foreach(array("Facebook", "Twitter", "Flickr", "RSS", "Linkedin", "Google-Plus", "Github","Youtube", "Bitbucket", "Instagram","Pinterest","Dribbble") as $network) : ?>
 
 					<?php if (!empty($networks[$network]['link'])) : ?>
 
-				<li <?php if ($display =="icons") { ?> class="display-icons"<?php } ?>>
+						<li class="<?php echo strtolower($network);?> <?php if ($display =="icons") { ?> display-icons<?php } ?>">
 
-					<a rel="external" <?php if ($display =="icons") { ?> title="<?php echo strtolower($network); ?>" <?php } ?> href="<?php echo $networks[$network]['link']; ?>">
+						<a rel="external" <?php if ($display =="icons") { ?> title="<?php echo strtolower($network); ?>" <?php } ?> <?php if ($new_window == 1) { ?> target="_blank" <?php } ?> href="<?php echo $networks[$network]['link']; ?>">
 
-								<?php if (($display == "both") or ($display =="icons")) { ?>
+						<?php if (($display == "both") or ($display =="icons")) { ?>
 
-
-							<i class="icon-<?php echo strtolower($network);?> icon-<?php echo $size;?>"></i>
+							<i class="fa fa-<?php echo strtolower($network);?> <?php echo $size;?>"></i>
 							
 						<?php } if (($display == "labels") or ($display == "both")) { ?> 
 
