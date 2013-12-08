@@ -4,7 +4,7 @@ Plugin Name: WP Social Networks Widget
 Description:  Displays Font Awesome Icons of social network sites that linkback to social network profiles. 
 Plugin URI: http://www.divinedeveloper.com/projects/wp-social-networks-widget/
 Author: Mladjo
-Version: 1.1
+Version: 1.2
 Author URI: http://www.divinedeveloper.com/
 */
 
